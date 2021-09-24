@@ -14,8 +14,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_copybutton
-
 # -- Project information -----------------------------------------------------
 
 project = 'GenT'

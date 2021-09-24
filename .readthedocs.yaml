@@ -1,0 +1,8 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Optionally set the version of Python and requirements required to build your docs
+python:
+   install:
+   - requirements: sphinx_copybutton
