@@ -6,6 +6,7 @@ Welcome to GenT
    :caption: GenT hello
 
    overview
+   sphinx/sphinx
    some
    
 
