@@ -17,8 +17,9 @@ download python 3.9.6
 +++++++++++++++++++++++
 path: https://www.python.org/downloads/release/python-396/
 
-note
-make sure python and pip are ok.
+.. note::
+
+    make sure python and pip are ok.
 
 install breath
 +++++++++++++++++++++++++++
