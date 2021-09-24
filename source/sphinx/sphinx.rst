@@ -2,14 +2,23 @@ Sphinx
 ##########
 python docs generater, you can use it create docs for c++ project or write books
 
+Todo
+************
+- fix the pip install custom package
+- create docs form cpp project
+- 
+
 keywords
 ************
-- doxs
-- doxygen
-- breath
-- sphinx
+- docs
+- doxygen https://www.doxygen.nl/index.html
+- breathe https://www.breathe.readthedocs.io
+- sphinx  
+- reStructureText
 - exhale
-- ReadTheDocs
+- ReadTheDocs https://readthedocs.org
+- Sphinx_theme https://sphinx-themes.org
+- Github
 
 SetUp win10
 ******************
@@ -21,7 +30,7 @@ path: https://www.python.org/downloads/release/python-396/
 
     make sure python and pip are ok.
 
-install breath
+install breathe
 +++++++++++++++++++++++++++
 .. code::
 
@@ -41,7 +50,7 @@ install copy button
 
 Create cpp project docx
 **************************
-[comments] >> [doxygen: xml] >> [breath][sphinx: html]
+[comments] >> [doxygen: xml] >> [breathe][sphinx: html]
 
 - comments for code with the doxygen origen words
 - config the doxygen file
