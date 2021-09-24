@@ -3,6 +3,11 @@
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
 # Optionally set the version of Python and requirements required to build your docs
+
 python:
-   install:
-   - requirements: sphinx_copybutton
+  version: "3.9.6"
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        - sphinx_copybutton
