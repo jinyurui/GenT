@@ -12,9 +12,7 @@ sphinx:
 
 #advance cfg by web
 #see https://readthedocs.org/dashboard/gent/advanced/
-#python:
-#    version: "3.7"
-#    install:
-#      - requirements: requirements.txt
-#      - method: pip
-#        path: .
+python:
+   version: "3.7"
+   install:
+   - requirements: docs/requirements.txt
