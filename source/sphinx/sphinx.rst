@@ -6,7 +6,9 @@ Todo
 ************
 - fix the pip install custom package
 - create docs form cpp project
-- 
+- delegate your web by Github
+- delegate books by readthedocs
+- rst fromat
 
 keywords
 ************
