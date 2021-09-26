@@ -1,0 +1,3 @@
+#pip install
+#copyBtn
+sphinx_copybutton

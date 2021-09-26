@@ -10,10 +10,9 @@ version: 2
 sphinx:
    configuration: source/conf.py
 
-#python:
-#  version: "3.7"
-#  install:
-#    - method: pip
-#      path: .
-#      extra_requirements:
-#        - ['sphinx_copybutton']
+python:
+    version: "3.7"
+    install:
+      - requirements: ./requirements.txt
+      - method: pip
+        path: .
