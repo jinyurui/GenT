@@ -15,7 +15,6 @@ D
 
 class Test
 ------------
-
 .. doxygenclass:: Test
 
 
