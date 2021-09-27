@@ -23,7 +23,7 @@ import os
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   from subprocess import call 
-  call('../run_doxygen.sh;', shell=True)
+  call('../doxygen/run_doxygen.sh;', shell=True)
 
 # -- Project information -----------------------------------------------------
 
