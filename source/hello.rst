@@ -15,8 +15,8 @@ D
 
 class Test
 ------------
+
 .. doxygenclass:: Test
-   :members:
 
 
 
