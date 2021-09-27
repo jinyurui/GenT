@@ -23,7 +23,7 @@ import os
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   from subprocess import call 
-  call('../doxygen/run_doxygen.bat;', shell=True)
+  call('run_doxygen.bat;', shell=True)
 
 # -- Project information -----------------------------------------------------
 
