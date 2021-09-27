@@ -1,4 +1,7 @@
 build/
+doxygen/build/
+doxygen/doxygen.exe
+doxygen/libclang.dll
 
 # Prerequisites
 *.d
