@@ -11,15 +11,15 @@ public:
     /*!
       new  
      */
-    Test(){}
+    Test();
  
     /*!
       destory
      */
-    virtual ~Test(){}
+    virtual ~Test();
 
     /*!
       add
     */
-    virtual void add() = 0
+    virtual void add() = 0;
 };
