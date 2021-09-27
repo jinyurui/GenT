@@ -72,5 +72,5 @@ html_css_files = [
 
 # Breathe extension variables
 # breathe_projects = { "GenT": "../doxygen/build/xml/"}
-breathe_projects = { "GenT": "xml"}
+breathe_projects = { "GenT": "xml/"}
 breathe_default_project = "GenT"
