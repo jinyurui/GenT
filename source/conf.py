@@ -14,16 +14,18 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 import sys
 import os
+import re
+import subprocess
 
 # hack for readthedocs to cause it to run doxygen first
 # https://github.com/rtfd/readthedocs.org/issues/388
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
-  from subprocess import call 
-  call('run_doxygen.bat;', shell=True)
+  #from subprocess import call 
+  #call('run_doxygen.bat;', shell=True)
+   subprocess.call('doxygen')
 
 # -- Project information -----------------------------------------------------
 
