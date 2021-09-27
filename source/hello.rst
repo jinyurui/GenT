@@ -13,6 +13,11 @@ C
 D
 ------------
 
+class Test
+------------
+.. doxygenclass:: Test
+   :members:
+
 
 
 
