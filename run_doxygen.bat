@@ -1,2 +1,1 @@
-#!/bin/bash
-doxygen ../doxygen/Doxyfile
+doxygen doxygen/Doxyfile
