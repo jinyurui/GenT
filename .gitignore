@@ -2,6 +2,7 @@ build/
 source/build/
 source/doxygen.exe
 source/libclang.dll
+source/xml/
 
 # Prerequisites
 *.d
