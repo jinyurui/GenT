@@ -7,6 +7,7 @@ Welcome to GenT
 
    overview
    sphinx/sphinx
+   git/git
    some
    
 
