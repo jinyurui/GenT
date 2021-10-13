@@ -7,7 +7,7 @@ Art
    hello
 
 Image
-=================
+----------------------
 .. image:: image.png
    :alt: hello
 
@@ -16,7 +16,7 @@ Image
     A caption for this figure
 
 Video
-================
+----------------------
 .. raw:: html
 
    <video width="320" height="240" controls="controls">
