@@ -11,10 +11,10 @@ Some keys
                             
     CMAKE_SOURCE_DIR         << top CMakeLists [readonly]
     PROJECT_SOURCE_DIR       << recent project cmd ref, this is diff CMAKE_SOURCE_DIR [readonly]
-    PROJECT_BINARY_DIR       << run camke path, eg ./build/
+    PROJECT_BINARY_DIR       << run cmake path, eg ./build/
 
-    CMAKE_CURRENT_SOURCE_DIR << recent camkelists path, action by add_subdirectory
-    CMAKE_CURRENT_BINARY_DIR << recent camkelists binary path, action by add_subdirectory
+    CMAKE_CURRENT_SOURCE_DIR << recent cmakelists path, action by add_subdirectory
+    CMAKE_CURRENT_BINARY_DIR << recent cmakelists binary path, action by add_subdirectory
 
     EXECUTABLE_OUTPUT_PATH   << exe path [read & write]
     LIBRARY_OUTPUT_PATH      << lib path [read & write]
@@ -92,7 +92,7 @@ root cmake
 
 
 
-static lib camke
+static lib cmake
 *********************
 .. code::
 
