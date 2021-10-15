@@ -10,6 +10,7 @@ Welcome to GenT
    git/git
    cmake/cmake
    video/video
+   Qt/qtcore
    some
    
 
