@@ -164,9 +164,38 @@ Quick & qml
 
 Opengl
 ---------------------
+QOpenGLWidget + Opengl api + no qt openglfunctions
+
+Using QOpenGLWidget is like using widgets. You only need to deal with these three virtual methods
+
+- initializeGL  
+    set up Opengl resources and state
+- paintGL
+    Opengl render, called by and update
+- resizeGL
+    update viewport and projection
+
+The user output of the upper level of the GUI can be obtained through general events, 
+and then processed to update the opengl state.
+
+.. note::
+
+    It is best to separate the opengl related packages, so that they can be used in widgets and qml.
 
 Process
 ---------------------
+Use this to start the process, and you can get output or input.
+
+QProcess start path with space
+
+.. code::
+
+    QProcess process;
+    process.start("/A BCD/e.exe", QStringList());
+
+Translation
+----------------------
+
 
 Keyboard
 ----------------------
@@ -174,4 +203,4 @@ Keyboard
    :alt: keyboard
 
 Plugin
-----------------------  
+----------------------

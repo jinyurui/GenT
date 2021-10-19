@@ -5,13 +5,13 @@ GenT Main
 Overview
 --------------------------------
 - docs create
+- git
+- cmake
+- video
 - Qt
 - grpc
 - opengl
-- story
-- video
-- show
- 
+
 Release notes
 --------------------------------
 v1.0
