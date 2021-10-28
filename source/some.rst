@@ -4,8 +4,6 @@ Art
 .. toctree::
    :maxdepth:  2
 
-   hello
-
 Image
 ----------------------
 .. image:: image.png

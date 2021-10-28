@@ -54,9 +54,10 @@ Qt Objct
         Q_GADGET
         Q_PROPERTY(bool ok READ)
     public:
-        Lighter() = default;
+        Lighter() = default; // very very
         bool m_ok;
     };
+    Q_DECLARE_METATYPE(Lighter)
 
 Signal& Slots
 ^^^^^^^^^^^^^^^^^^^^^
