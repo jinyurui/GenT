@@ -58,7 +58,7 @@ Define
 
 Typedef
 --------------------
-.. doxygentypedef:: callBack
+.. doxygentypedef:: funp
 
 Struct
 --------------------
@@ -71,6 +71,8 @@ Enum
 
 Page
 --------------------
+.. doxygenpage:: page_root
+    :content-only:
 
      
 

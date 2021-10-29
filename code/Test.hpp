@@ -2,15 +2,20 @@
 #pragma once
 
 /*!
+  @file Test.hpp
+ */
+
+/*!
   @def PROJECT_NAME
   @brief the define of PROJECT_NAME
  */
 #define PROJECT_NAME "GenT"
 
 /*!
-  @typedef callBack
+  @typedef funp
+  @brief typedef funp
  */
-typedef void (*callback)(bool);
+typedef void (*funp)(bool a);
 
 /*!
   @struct Info
@@ -57,3 +62,34 @@ public:
     */
     virtual void add() = 0;
 };
+
+/*!
+  @page page_root Root
+  main page...
+  | key   | value |
+  | :---- | :---- |
+  | 123   | ABC   |
+  | 456   | QWE   |
+  | 789   | SDF   |
+  - @subpage page_A "A"
+  @copybrief page_A
+  - @subpage page_B "B"
+  @copybrief page_B
+  - @subpage page_C "C"
+  @copybrief page_C
+ */
+
+ /*!
+   @page page_A A
+   @brief this is A
+  */
+
+   /*!
+   @page page_B B
+   @brief this is B
+  */
+  
+  /*!
+   @page page_C C
+   @brief this is C
+  */
