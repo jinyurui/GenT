@@ -21,7 +21,7 @@ Qt Objct
     class GentWater : public QObject
     {
         Q_OBJECT
-        Q_PROPERTY(bool ok READ ok WRITE setOk NOTIFY okChanged)
+        Q_PROPERTY(bool m_ok READ ok WRITE setOk NOTIFY okChanged)
     public:
         GentWater(QObject* parent = nullptr);
         virtual ~GentWater();
@@ -34,7 +34,7 @@ Qt Objct
 
         Q_INVOKABLE void justTry();
 
-        bool ok() const;
+        const bool ok() const;
         void setOk(bool newOk);
 
     signals:
@@ -42,7 +42,7 @@ Qt Objct
 
     public slots:
         void onGetSome();
-
+        
     private:
         WorkerImpl* m_worker;
         bool m_ok;
@@ -52,11 +52,15 @@ Qt Objct
     {
         //Q_GADGETs can have Q_ENUM, Q_PROPERTY and Q_INVOKABLE, but they cannot have signals or slots.
         Q_GADGET
-        Q_PROPERTY(bool ok READ)
+
+        //export property ok
+        Q_PROPERTY(bool m_ok READ ok)
     public:
         Lighter() = default; // very very
-        bool m_ok;
+        const ok() const { return m_ok; }
+        bool m_ok{false};
     };
+    //declare meta type
     Q_DECLARE_METATYPE(Lighter)
 
 Signal& Slots
