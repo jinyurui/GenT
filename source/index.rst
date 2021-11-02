@@ -12,6 +12,7 @@ Welcome to GenT
    video/video
    Qt/qtcore
    code/code
+   lol/lol
    some
    
 
