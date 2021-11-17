@@ -13,6 +13,7 @@ Welcome to GenT
    Qt/qtcore
    code/code
    lol/lol
+   stock/stock
    some
    
 
