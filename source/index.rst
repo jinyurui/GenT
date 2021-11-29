@@ -14,6 +14,7 @@ Welcome to GenT
    code/code
    lol/lol
    stock/stock
+   grpc/grpc
    some
    
 
