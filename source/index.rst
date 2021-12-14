@@ -15,6 +15,8 @@ Welcome to GenT
    lol/lol
    stock/stock
    grpc/grpc
+   cpp/cpp
+   doxygen/doxygen
    some
    
 

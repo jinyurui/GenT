@@ -9,7 +9,7 @@ Work flow
 
 proto
 +++++++++++++++
-... code::
+.. code::
 
     syntax = "proto3";
 
@@ -45,7 +45,7 @@ Call Tables
 
 Async client
 +++++++++++++++
-... code::
+.. code::
 
     Client{
         call{
@@ -86,3 +86,46 @@ Async client
 
 Async server
 +++++++++++++++
+.. code::
+
+    Server{
+        std::unique_ptr<ServerCompletionQueue> cq_;
+        service_;
+        std::unique_ptr<Server> server_;
+
+        CallData{
+          T req;
+          T res;
+          context;
+        }
+
+        ~{
+            server_->Shutdown();
+            // Always shutdown the completion queue after the server.
+            cq_->Shutdown();
+        }
+        create{
+            std::string server_address("0.0.0.0:50051");
+
+            ServerBuilder builder;
+            // Listen on the given address without any authentication mechanism.
+            builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+
+            // Register "service_" as the instance through which we'll communicate with
+            // clients. In this case it corresponds to an *asynchronous* service.
+            builder.RegisterService(&service_);
+
+            // Get hold of the completion queue used for the asynchronous communication
+            // with the gRPC runtime.
+            cq_ = builder.AddCompletionQueue();
+            
+            // Finally assemble the server.
+            server_ = builder.BuildAndStart();
+            std::cout << "Server listening on " << server_address << std::endl;
+        }
+
+        Run{
+
+        }
+
+    }
