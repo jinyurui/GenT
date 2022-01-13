@@ -76,3 +76,96 @@ Thread
         std::mutex m_mutex;
         std::condition_variable m_condition;
     };
+
+
+CRTP(CR template pattern)
+++++++++++++++++++++++++++++++
+.. code::
+
+    template<typename T>
+    class Base{
+        void run(){
+            static_cast<T*>(this)->tryDo();
+        }
+    };
+
+    class Super : public Base<Super>{
+        void tryDo(){
+            // call super with no vtb
+        }
+    };
+
+VTB
+++++++++++++++++++++++++
+.. code::
+
+    class __declspec(novtable) Base{
+        virtual void one() = 0;
+        virtual void two(int a) = 0;
+        virtual void two(int a, int b) = 0;
+    };
+
+    the order is:
+    typedef struct Base Base;
+    typedef struct BaseVtb{
+        void(*one)(Base*pthis);
+        void(*two_a_b)(Base*pthis,int a, int b);
+        void(*two_a)(Base*pthis, int a);
+    }BaseVtb;
+    struct Base{
+        const BaseVtb* pVtbl;
+    };
+
+Multiple inheritance
++++++++++++++++++++++++++
+.. code::
+
+    // this beat
+    class Base{
+        virtual void run() = 0;
+        virtual void tryDo() = 0;
+    };
+    class A{
+        virtual one(){
+            // this is 0xxxx00 + offset of Base, that is not we want
+            Base* p = reinterpret_cast<Base*>(this); // bad
+            p->tryDo();
+        }
+
+        virtual one_withSuper(Base*self){
+            Base* p = reinterpret_cast<Base*>(self);
+        }
+    };
+
+    class B : public Base, public A{
+        void run(){
+            // this is 0xxxx00
+            one();
+
+            //diff
+            one_withSuper(this);
+        }
+        void tryDo(){
+            ...
+        }
+    };
+
+Interesting
+++++++++++++++++++++++
+.. code::
+
+    class Task{
+        using CallBack = std::functional<void(Task*)>; 
+        Task(CallBack&& cb){
+            m_cb = std::move(cb);
+        }
+    }
+
+    Task* creatTask(std::functional<void(Task*)> cb){
+        Task* obj = new Task(cb);
+        return obj;
+    }
+
+    Task* task =  creatTask([](Task* task){
+        ...
+    });
