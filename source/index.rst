@@ -7,6 +7,7 @@ Welcome to GenT
 
    overview
    sphinx/sphinx
+   RST/rst
    git/git
    cmake/cmake
    video/video
