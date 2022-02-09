@@ -183,3 +183,33 @@ Type convert
     }
     A one; one.m_a = 1;
     std::cout << 1 + one << std::endl;
+
+Args list
+++++++++++++++++++++++++
+.. code::
+
+    template <typename T>
+    void unpack(T&& t)
+    {
+        std::cout << std::forward<T>(t) << ' ';
+    }
+
+    template <typename ... Args>
+    void debugLogImpl(Args&& ... args)
+    {
+        int dummy[] = {0 , (unpack(std::forward<Args>(args)), 0)...};
+        (void(dummy));
+        std::cout << '\n';
+
+        // operator ,
+        int fake[] = {0, (12, 1), (2, 2)};
+        std::cout << "fake: " << fake[0] << fake[1] << fake[2] << std::endl;
+    }
+
+    template <typename ... Args>
+    void debugLog(Args&& ... args)
+    {
+        debugLogImpl(std::forward<Args>(args)...);
+    }
+
+    #define MY_DEBUG_LOG(...) debugLog("filename:", __FILE__, " line:", __LINE__, " ", __VA_ARGS__)
