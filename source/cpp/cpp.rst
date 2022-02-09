@@ -169,3 +169,17 @@ Interesting
     Task* task =  creatTask([](Task* task){
         ...
     });
+
+Type convert
+++++++++++++++++++++++
+.. code::
+
+    operator T () { return some; }
+
+    class A{
+        public:
+        int m_a;
+        operator int () { return m_a; }
+    }
+    A one; one.m_a = 1;
+    std::cout << 1 + one << std::endl;
