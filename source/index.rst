@@ -19,6 +19,8 @@ Welcome to GenT
    cpp/cpp
    doxygen/doxygen
    pybind11/pybind11
+   wave/wave
+   male/male
    some
    
 
